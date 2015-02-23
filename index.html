@@ -105,15 +105,100 @@
                 <dt><img alt="Leaflet" src="images/leaflet_logo.png"/></dt>
                 <dd class="fragment">First released in 2011</dd>
                 <dd class="fragment">Developed by Vladimir Agafonkin</dd>
-                <dd class="fragment"><img src="images/vladimir_agafonkin.jpg" /></dd>
-                <dd class="fragment">Used by <a href="https://www.flickr.com/">Flickr</a><span class="fragment">, <a href="http://foursquare.com/">Foursquare</a></span><span class="fragment">, <a href="http://pinterest.com/">Pinterest</a></span><span class="fragment">, <a href="https://www.craigslist.org/">craigslist</a></span><span class="fragment">, <a href="https://github.com/">GitHub</a></span></dd>
+                <dd class="fragment"><img src="images/vladimir_agafonkin.jpg"/></dd>
+                <dd class="fragment">Used by <a href="https://www.flickr.com/">Flickr</a><span class="fragment">, <a
+                        href="http://foursquare.com/">Foursquare</a></span><span class="fragment">, <a
+                        href="http://pinterest.com/">Pinterest</a></span><span class="fragment">, <a
+                        href="https://www.craigslist.org/">craigslist</a></span><span class="fragment">, <a
+                        href="https://github.com/">GitHub</a></span></dd>
             </dl>
         </section>
 
         <section>
-            <iframe src="https://raw.githubusercontent.com/bricemciver/leaflet-demo/master/stage1/index.html" width="800" height="610" frameborder="0"
-                    marginwidth="0" marginheight="0" scrolling="no"
-                    style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+            <section>
+                <iframe src="stage1/index.html" width="800" height="600" frameborder="0" marginwidth="0"
+                        marginheight="0"
+                        scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            </section>
+            <section>
+            <pre><code data-trim style="font-size: 14px; line-height: 150%">&lt;html&gt;
+                &lt;head lang="en"&gt;
+                &lt;title&gt;Leaflet Demo&lt;/title&gt;
+                &lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /&gt;
+                &lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;div id="map" style="height: 600px"&gt;&lt;/div&gt;
+                &lt;script&gt;
+                var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                osmAttrib = '&copy; &lt;a href="http://openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt;
+                contributors',
+                osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+
+                var map = L.map('map').setView([39.034672, -94.587095], 15).addLayer(osm);
+                L.marker([39.034672, -94.587095]).addTo(map);
+                &lt;/script&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;</code></pre>
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <iframe src="stage2/index.html" width="800" height="600" frameborder="0" marginwidth="0"
+                        marginheight="0"
+                        scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            </section>
+            <section>
+            <pre><code class="javascript" data-trim style="font-size: 14px; line-height:150%; word-wrap: break-word;">
+                L.marker([39.034672, -94.587095])
+                .addTo(map)
+                .bindPopup('<span style="color: #b71e43; font-weight: bold">South Plaza</span><br/>' +
+                '<span style="color: #000000; font-weight:bold">816-561-5100</span><br/>' +
+                '5105 Main Street<br/>Kansas City, MO 64112')
+                .openPopup();
+            </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <iframe src="stage3/index.html" width="800" height="600" frameborder="0" marginwidth="0"
+                        marginheight="0"
+                        scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            </section>
+
+            <section>
+            <pre><code class="javascript" data-trim style="font-size: 14px; line-height: 150%; word-wrap: break-word;">
+                var deliveryArea = L.polygon([
+                [39.063267,-94.571687],
+                [38.991554,-94.575668],
+                [38.99328,-94.630396],
+                [39.025985,-94.630423],
+                [39.026252,-94.627748],
+                [39.027435,-94.627286],
+                [39.028952,-94.625849],
+                [39.032919,-94.625891],
+                [39.033536,-94.621235],
+                [39.052502,-94.621321],
+                [39.057201,-94.623038],
+                [39.061949,-94.625548],
+                [39.064881,-94.621772],
+                [39.064665,-94.613038]
+                ]).addTo(map);
+                map.fitBounds(deliveryArea.getBounds());
+            </code></pre>
+            </section>
+        </section>
+
+        <section>
+            <h2>Geometry Types</h2>
+        </section>
+
+        <section>
+            <iframe src="stage4/index.html" width="800" height="600" frameborder="0" marginwidth="0" marginheight="0"
+                    scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
         </section>
 
         <!-- Example of nested vertical slides -->
