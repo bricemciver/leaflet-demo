@@ -121,25 +121,25 @@
                         scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
             </section>
             <section>
-            <pre><code data-trim style="font-size: 14px; line-height: 150%">&lt;html&gt;
-                &lt;head lang="en"&gt;
-                &lt;title&gt;Leaflet Demo&lt;/title&gt;
-                &lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /&gt;
-                &lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;
-                &lt;/head&gt;
-                &lt;body&gt;
-                &lt;div id="map" style="height: 600px"&gt;&lt;/div&gt;
-                &lt;script&gt;
-                var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                osmAttrib = '&copy; &lt;a href="http://openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt;
-                contributors',
-                osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
+                <pre><code data-trim style="font-size: 14px; line-height: 150%">&lt;html&gt;
+                    &lt;head lang="en"&gt;
+                    &lt;title&gt;Leaflet Demo&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /&gt;
+                    &lt;script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"&gt;&lt;/script&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    &lt;div id="map" style="height: 600px"&gt;&lt;/div&gt;
+                    &lt;script&gt;
+                    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                    osmAttrib = '&copy; &lt;a href="http://openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt;
+                    contributors',
+                    osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
 
-                var map = L.map('map').setView([39.034672, -94.587095], 15).addLayer(osm);
-                L.marker([39.034672, -94.587095]).addTo(map);
-                &lt;/script&gt;
-                &lt;/body&gt;
-                &lt;/html&gt;</code></pre>
+                    var map = L.map('map').setView([39.034672, -94.587095], 15).addLayer(osm);
+                    L.marker([39.034672, -94.587095]).addTo(map);
+                    &lt;/script&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;</code></pre>
             </section>
         </section>
 
@@ -151,14 +151,13 @@
                         scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
             </section>
             <section>
-            <pre><code class="javascript" data-trim style="font-size: 14px; line-height:150%; word-wrap: break-word;">
-                L.marker([39.034672, -94.587095])
-                .addTo(map)
-                .bindPopup('<span style="color: #b71e43; font-weight: bold">South Plaza</span><br/>' +
-                '<span style="color: #000000; font-weight:bold">816-561-5100</span><br/>' +
-                '5105 Main Street<br/>Kansas City, MO 64112')
-                .openPopup();
-            </code></pre>
+                <pre><code class="javascript" data-trim style="font-size: 14px; line-height:150%;">L.marker([39.034672,
+                    -94.587095])
+                    .addTo(map)
+                    .bindPopup('<span style="color: #b71e43; font-weight: bold">South Plaza</span><br/>' +
+                    '<span style="color: #000000; font-weight:bold">816-561-5100</span><br/>' +
+                    '5105 Main Street<br/>Kansas City, MO 64112')
+                    .openPopup();</code></pre>
             </section>
         </section>
 
@@ -170,35 +169,199 @@
             </section>
 
             <section>
-            <pre><code class="javascript" data-trim style="font-size: 14px; line-height: 150%; word-wrap: break-word;">
-                var deliveryArea = L.polygon([
-                [39.063267,-94.571687],
-                [38.991554,-94.575668],
-                [38.99328,-94.630396],
-                [39.025985,-94.630423],
-                [39.026252,-94.627748],
-                [39.027435,-94.627286],
-                [39.028952,-94.625849],
-                [39.032919,-94.625891],
-                [39.033536,-94.621235],
-                [39.052502,-94.621321],
-                [39.057201,-94.623038],
-                [39.061949,-94.625548],
-                [39.064881,-94.621772],
-                [39.064665,-94.613038]
-                ]).addTo(map);
-                map.fitBounds(deliveryArea.getBounds());
-            </code></pre>
+                <pre><code class="javascript" data-trim style="font-size: 14px; line-height: 150%;">var deliveryArea =
+                    L.polygon([
+                    [39.063267,-94.571687],
+                    [38.991554,-94.575668],
+                    [38.99328,-94.630396],
+                    [39.025985,-94.630423],
+                    [39.026252,-94.627748],
+                    [39.027435,-94.627286],
+                    [39.028952,-94.625849],
+                    [39.032919,-94.625891],
+                    [39.033536,-94.621235],
+                    [39.052502,-94.621321],
+                    [39.057201,-94.623038],
+                    [39.061949,-94.625548],
+                    [39.064881,-94.621772],
+                    [39.064665,-94.613038]
+                    ]).addTo(map);
+                    map.fitBounds(deliveryArea.getBounds());</code></pre>
             </section>
         </section>
 
         <section>
             <h2>Geometry Types</h2>
+            <ul>
+                <li>Polyline</li>
+                <li>MultiPolyline</li>
+                <li>Polygon</li>
+                <li>MultiPolygon</li>
+                <li>Rectangle</li>
+                <li>Circle</li>
+            </ul>
         </section>
 
         <section>
-            <iframe src="stage4/index.html" width="800" height="600" frameborder="0" marginwidth="0" marginheight="0"
-                    scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            <section>
+                <iframe src="stage4/index.html" width="800" height="600" frameborder="0" marginwidth="0"
+                        marginheight="0"
+                        scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            </section>
+            <section>
+                <pre><code class="javascript">deliveryArea.on('mouseover', function(e) {
+    e.target.setStyle({
+        color: '#666',
+        fillColor: 'yellow'
+    });
+});
+deliveryArea.on('mouseout', function(e) {
+    e.target.setStyle({
+        color: '#03f',
+        fillColor: '#03f'
+    });
+});</code></pre>
+            </section>
+            <section>
+                <h2>Styles</h2>
+                <ul>
+                    <li>stroke
+                        <ul>
+                            <li>color</li>
+                            <li>weight</li>
+                            <li>opacity</li>
+                        </ul>
+                    </li>
+                    <li>fill
+                        <ul>
+                            <li>fillColor</li>
+                            <li>fillOpacity</li>
+                        </ul>
+                    </li>
+                    <li>dashArray</li>
+                    <li>lineCap</li>
+                    <li>lineJoin</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Events</h2>
+                <ul>
+                    <li>click</li>
+                    <li>dblclick</li>
+                    <li>mousedown</li>
+                    <li>mouseover</li>
+                    <li>mouseout</li>
+                    <li>contextmenu</li>
+                    <li>add</li>
+                    <li>remove</li>
+                    <li>popupopen</li>
+                    <li>popupclose</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>Tile Layer</h2>
+
+            <p>URL template is a string of the following form:</p>
+            <pre><code class="javascript">http://{s}.somedomain.com/blabla/{z}/{x}/{y}.png</code></pre>
+            <ul>
+                <li><code class="javascript">{s}</code> — one of the available subdomains</li>
+                <li><code class="javascript">{z}</code> — zoom level</li>
+                <li><code class="javascript">{x}</code> and <code class="javascript">{y}</code> — tile coordinates</li>
+            </ul>
+            <p>You can use custom keys in the template like this:</p>
+            <pre><code class="javascript" style="font-size: 18px">L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png',
+                {foo: 'bar'});</code></pre>
+        </section>
+        <section>
+            <section>
+                <h2>Example Tile Providers</h2>
+
+                <p>MapQuest</p>
+
+                <p>http://developer.mapquest.com/web/products/open/map</p>
+                <pre><code class="javascript" style="font-size: 14px; line-height: 140%">var mqSubdomains = [
+                    'otile1','otile2', 'otile3', 'otile4' ];
+                    var mqTileUrlPrefix = window.location.protocol !== 'https:' ? 'http://{s}' : 'https://{s}-s';
+                    // OSM Tiles attribution
+                    var osmTileAttr = 'Map data © OpenStreetMap contributors, Tiles Courtesy of MapQuest';
+                    var osmMapOpt = {attribution: osmTileAttr,
+                    maxNativeZoom: 18,
+                    maxZoom: 21,
+                    subdomains: mqSubdomains};
+                    L.tileLayer(mqTileUrlPrefix+'.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg',osmMapOpt);
+                    // Open Aerial Tiles attribution
+                    var oaTileAttr = 'Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, ' +
+                    'Farm Service Agency, Tiles Courtesy of MapQuest';
+                    var oaMapOpt = {attribution: oaTileAttr,
+                    maxNativeZoom: 18,
+                    maxZoom: 21,
+                    subdomains: mqSubdomains};
+                    L.tileLayer(mqTileUrlPrefix+'/tiles/1.0.0/sat/{z}/{x}/{y}.jpg',oaMapOpt);</code></pre>
+            </section>
+            <section>
+                <p>CartoDB</p>
+
+                <p>http://cartodb.com/basemaps/</p>
+                <pre><code class="javascript" style="font-size:15px">var httpPrefix =
+                    'http://{s}.basemaps.cartocdn.com';
+                    var httpsPrefix = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net';
+                    var cdbTileUrlPrefix = window.location.protocol !== 'https:' ? httpPrefix : httpsPrefix;
+                    var cdbMapOpt = {attribution: '&copy; OpenStreetMap contributors, &copy; CartoDB'};
+                    L.tileLayer(cdbTileUrlPrefix+'/&lt;version&gt;/{z}/{x}/{y}.png',cdbMapOpt);</code></pre>
+                <ul>
+                    <li>Positron - light_all</li>
+                    <li>Positron (no labels) - light_nolabels</li>
+                    <li>Dark Matter - dark_all</li>
+                    <li>Dark Matter (no labels) - dark_nolabels</li>
+                </ul>
+            </section>
+            <section>
+                <p>ESRI</p>
+
+                <p>http://server.arcgisonline.com/ArcGIS/rest/services</p>
+                <ul>
+                    <li>Streets</li>
+                    <li>Topographic</li>
+                    <li>Oceans (with and without labels)</li>
+                    <li>National Geographic</li>
+                    <li>Dark Gray & Gray (with and without labels)</li>
+                    <li>Imagery (with and without labels + transportation)</li>
+                    <li>Shaded Relief (with and without labels)</li>
+                    <li>Terrain (with and without labels)</li>
+                </ul>
+                <aside class="notes">ESRI stands for Environmental System Research Institute</aside>
+            </section>
+            <section>
+                <p>Stamen Design</p>
+
+                <p>http://maps.stamen.com</p>
+                <ul>
+                    <li>Toner (standard, hybrid, labels, lines, background, lite)</li>
+                    <li>Terrain (standard, labels, lines, background)</li>
+                    <li>Watercolor</li>
+                </ul>
+            </section>
+            <section>
+                <p>Mapbox</p>
+
+                <p>https://www.mapbox.com/developers/api/maps/</p>
+                <ul>
+                    <li>Requires an API key</li>
+                    <li>Free up to 50,000 views / month</li>
+                </ul>
+            </section>
+            <section>
+                <p>Plugins by Pabel Shramov</p>
+
+                <p>https://github.com/shramov/leaflet-plugins</p>
+                <ul>
+                    <li>Bing</li>
+                    <li>Google</li>
+                    <li>Yandex</li>
+                </ul>
+            </section>
         </section>
 
         <!-- Example of nested vertical slides -->
@@ -646,3 +809,4 @@
 
 </body>
 </html>
+
