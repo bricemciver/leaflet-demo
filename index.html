@@ -210,17 +210,17 @@
             </section>
             <section>
                 <pre><code class="javascript">deliveryArea.on('mouseover', function(e) {
-    e.target.setStyle({
-        color: '#666',
-        fillColor: 'yellow'
-    });
-});
-deliveryArea.on('mouseout', function(e) {
-    e.target.setStyle({
-        color: '#03f',
-        fillColor: '#03f'
-    });
-});</code></pre>
+                    e.target.setStyle({
+                    color: '#666',
+                    fillColor: 'yellow'
+                    });
+                    });
+                    deliveryArea.on('mouseout', function(e) {
+                    e.target.setStyle({
+                    color: '#03f',
+                    fillColor: '#03f'
+                    });
+                    });</code></pre>
             </section>
             <section>
                 <h2>Styles</h2>
@@ -259,22 +259,28 @@ deliveryArea.on('mouseout', function(e) {
                 </ul>
             </section>
         </section>
-
         <section>
-            <h2>Tile Layer</h2>
+            <section>
+                <iframe src="stage5/index.html" width="800" height="600" frameborder="0" marginwidth="0"
+                        marginheight="0"
+                        scrolling="no" style="max-width: 100%" allowfullscreen></iframe>
+            </section>
+            <section>
+                <h2>Tile Layer</h2>
 
-            <p>URL template is a string of the following form:</p>
-            <pre><code class="javascript">http://{s}.somedomain.com/blabla/{z}/{x}/{y}.png</code></pre>
-            <ul>
-                <li><code class="javascript">{s}</code> — one of the available subdomains</li>
-                <li><code class="javascript">{z}</code> — zoom level</li>
-                <li><code class="javascript">{x}</code> and <code class="javascript">{y}</code> — tile coordinates</li>
-            </ul>
-            <p>You can use custom keys in the template like this:</p>
+                <p>URL template is a string of the following form:</p>
+                <pre><code class="javascript">http://{s}.somedomain.com/blabla/{z}/{x}/{y}.png</code></pre>
+                <ul>
+                    <li><code class="javascript">{s}</code> — one of the available subdomains</li>
+                    <li><code class="javascript">{z}</code> — zoom level</li>
+                    <li><code class="javascript">{x}</code> and <code class="javascript">{y}</code> — tile
+                        coordinates
+                    </li>
+                </ul>
+                <p>You can use custom keys in the template like this:</p>
             <pre><code class="javascript" style="font-size: 18px">L.tileLayer('http://{s}.somedomain.com/{foo}/{z}/{x}/{y}.png',
                 {foo: 'bar'});</code></pre>
-        </section>
-        <section>
+            </section>
             <section>
                 <h2>Example Tile Providers</h2>
 
@@ -324,12 +330,10 @@ deliveryArea.on('mouseout', function(e) {
                 <ul>
                     <li>Streets</li>
                     <li>Topographic</li>
-                    <li>Oceans (with and without labels)</li>
                     <li>National Geographic</li>
-                    <li>Dark Gray & Gray (with and without labels)</li>
-                    <li>Imagery (with and without labels + transportation)</li>
-                    <li>Shaded Relief (with and without labels)</li>
-                    <li>Terrain (with and without labels)</li>
+                    <li>Imagery</li>
+                    <li>Shaded Relief</li>
+                    <li>Terrain</li>
                 </ul>
                 <aside class="notes">ESRI stands for Environmental System Research Institute</aside>
             </section>
@@ -338,8 +342,8 @@ deliveryArea.on('mouseout', function(e) {
 
                 <p>http://maps.stamen.com</p>
                 <ul>
-                    <li>Toner (standard, hybrid, labels, lines, background, lite)</li>
-                    <li>Terrain (standard, labels, lines, background)</li>
+                    <li>Toner</li>
+                    <li>Terrain</li>
                     <li>Watercolor</li>
                 </ul>
             </section>
@@ -374,14 +378,16 @@ deliveryArea.on('mouseout', function(e) {
                 <p>Use the <em>Space</em> key to navigate through all slides.</p>
                 <br>
                 <a href="#" class="navigate-down">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
+                    <img width="178" height="238"
+                         data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
                          alt="Down arrow">
                 </a>
             </section>
             <section>
                 <h2>Basement Level 1</h2>
 
-                <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+                <p>Nested slides are useful for adding additional detail underneath a high level horizontal
+                    slide.</p>
             </section>
             <section>
                 <h2>Basement Level 2</h2>
@@ -389,7 +395,8 @@ deliveryArea.on('mouseout', function(e) {
                 <p>That's it, time to go back up.</p>
                 <br>
                 <a href="#/2">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
+                    <img width="178" height="238"
+                         data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
                          alt="Up arrow" style="-webkit-transform: rotate(180deg);">
                 </a>
             </section>
@@ -399,7 +406,8 @@ deliveryArea.on('mouseout', function(e) {
             <h2>Slides</h2>
 
             <p>
-                Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a
+                Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it
+                out at <a
                     href="http://slides.com" target="_blank">http://slides.com</a>.
             </p>
         </section>
@@ -412,7 +420,8 @@ deliveryArea.on('mouseout', function(e) {
             </p>
 
             <p>
-                Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>.
+                Hold down alt and click on any element to zoom in on it using <a
+                    href="http://lab.hakim.se/zoom-js">zoom.js</a>.
                 Alt + click anywhere to zoom back out.
             </p>
         </section>
@@ -421,7 +430,8 @@ deliveryArea.on('mouseout', function(e) {
             <h2>Touch Optimized</h2>
 
             <p>
-                Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your
+                Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through
+                your
                 slides.
             </p>
         </section>
@@ -438,7 +448,8 @@ deliveryArea.on('mouseout', function(e) {
                     ## Markdown support
 
                     Write content using inline or external Markdown.
-                    Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+                    Instructions and more info available in the
+                    [readme](https://github.com/hakimel/reveal.js#markdown).
                 </section>
                 ```
             </script>
@@ -452,7 +463,8 @@ deliveryArea.on('mouseout', function(e) {
 
                 <p class="fragment">... to step through ...</p>
 
-                <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span>
+                <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
+                        class="fragment">slide.</span>
                 </p>
 
                 <aside class="notes">
@@ -537,11 +549,13 @@ deliveryArea.on('mouseout', function(e) {
                 <h2>Slide Backgrounds</h2>
 
                 <p>
-                    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color
+                    Set <code>data-background="#dddddd"</code> on a slide to change the background color. All
+                    CSS color
                     formats are supported.
                 </p>
                 <a href="#" class="navigate-down">
-                    <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
+                    <img width="178" height="238"
+                         data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png"
                          alt="Down arrow">
                 </a>
             </section>
@@ -560,7 +574,8 @@ deliveryArea.on('mouseout', function(e) {
                     data-background-color="#000000">
                 <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
                     <h2>Video Backgrounds</h2>
-                    <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+                            <pre><code style="word-wrap: break-word;">&lt;section
+                                data-background-video="video.mp4,video.webm"&gt;</code></pre>
                 </div>
             </section>
         </section>
@@ -569,7 +584,8 @@ deliveryArea.on('mouseout', function(e) {
             <h2>Background Transitions</h2>
 
             <p>
-                Different background transitions are available via the backgroundTransition option. This one's called
+                Different background transitions are available via the backgroundTransition option. This one's
+                called
                 "zoom".
             </p>
             <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
@@ -581,7 +597,8 @@ deliveryArea.on('mouseout', function(e) {
             <p>
                 You can override background transitions per-slide.
             </p>
-            <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+                    <pre><code style="word-wrap: break-word;">&lt;section
+                        data-background-transition="zoom"&gt;</code></pre>
         </section>
 
         <section>
@@ -602,7 +619,8 @@ deliveryArea.on('mouseout', function(e) {
                         }
                         }
                     </code></pre>
-            <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
+            <p>Code syntax highlighting courtesy of <a
+                    href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
             </p>
         </section>
 
@@ -661,11 +679,13 @@ deliveryArea.on('mouseout', function(e) {
             <p>
                 These guys come in two forms, inline: <q
                     cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
+                &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and
+                block:
             </p>
             <blockquote
                     cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of
+                &ldquo;For years there has been a theory that millions of monkeys typing at random on millions
+                of
                 typewriters would
                 reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
             </blockquote>
@@ -683,13 +703,15 @@ deliveryArea.on('mouseout', function(e) {
         <section>
             <h2>Speaker View</h2>
 
-            <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a
+            <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It
+                includes a
                 timer, preview of the upcoming slide as well as your speaker notes.</p>
 
             <p>Press the <em>S</em> key to try it out.</p>
 
             <aside class="notes">
-                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open
+                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if
+                you open
                 the speaker notes window (hit 's' on your keyboard).
             </aside>
         </section>
@@ -697,9 +719,11 @@ deliveryArea.on('mouseout', function(e) {
         <section>
             <h2>Export to PDF</h2>
 
-            <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>,
+            <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to
+                PDF</a>,
                 here's an example:</p>
-            <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0"
+            <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355"
+                    frameborder="0"
                     marginwidth="0" marginheight="0" scrolling="no"
                     style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
         </section>
@@ -732,7 +756,8 @@ deliveryArea.on('mouseout', function(e) {
             <h2>Take a Moment</h2>
 
             <p>
-                Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want
+                Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage
+                and want
                 to take distracting slides off the screen.
             </p>
         </section>
@@ -743,8 +768,10 @@ deliveryArea.on('mouseout', function(e) {
                 <li>Right-to-left support</li>
                 <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
                 <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-                <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-                <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+                <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a>
+                </li>
+                <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard
+                    bindings</a></li>
             </ul>
         </section>
 
